@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Camila Silveira, estudante de Ciências de Dados e Business Intelligence">
+    <title>index</title>
+
+    <style> /*Iniciando a estilização, css interno*/
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importando a fonte "Quicksand" para uso no site */
+*{ /* Configurações padrão */
+    font-family: "Quicksand", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ededed;
+    
+}
+/*Melhorando a responsividade*/
+@media (max-width: 768px) { 
+    #list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #navbar {
+        padding: 20px 5%;
+    }
+}
+#navbar{ 
+    background-color: #eeebeb;
+    padding: 30px 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+}
+#list{ /*list e list_item, referente à estilização dos itens da lista*/
+    list-style-type: none; 
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1.5cm;
+}
+.list_item a {
+    text-decoration: none;
+    color: #525050;
+    font-weight: 600;
+    font-size: 18px;
+}
+/*Alterando a cor ao passar o mouse*/
+.list_item a:hover { 
+    color: #2f2e2e;
+    transition: color 0.3s ease;
+}
+.header{
+    margin: 0px;
+    padding: 50px 100px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 2cm;
+    align-items: center;
+}
+/*Definindo imagem*/
+#logo{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    float: right;
+}
+#home{
+    float: left;
+    font-size: 25px;
+    color:rgb(22, 22, 22);
+    font-weight: 570;
+}
+#maior{
+    font-size: 50px;
+    color:rgb(0, 0, 0);
+    font-weight: 570;
+}
+#about_me, #formacao, #projetos{
+    margin: 30px auto;
+    max-width: 80%;  
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color:rgb(22, 22, 22);
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+h3{
+    text-align:justify;
+    font-size: 18px;
+    color:rgb(22, 22, 22);
+    font-weight: 450;
+    padding-bottom: 25px;
+    text-indent: 55px;
+}
+#img_bd{
+    margin-right: 50px; 
+    float: left;
+    width: 25%;
+    height: 30%;
+}
+#check_list{
+    list-style-type:circle;
+    display:block;
+    align-items:center;
+    font-size: 17px;
+    padding: 0px 0px 20px 20px;
+    padding-right: 20px;
+}
+.negrito{
+    font-weight: bold;
+}
+.img_projetos{
+    margin: auto;
+    padding-bottom: 30px;
+    width: 90%;
+}
+.centro{
+    text-align:  center;
+}
+/*Defnindo rodapé*/
+#footer{
+    background-color: #eeebeb;
+    box-shadow: 0 0 5px 5px rgb(212, 211, 211);
+    text-align: center;
+    padding: 15px;
+    color: #525050
+}
+    </style>
+</head>
+<body>
+    
+    <nav id="navbar"> <!-- Menu de navegação principal -->
+        <ul id="list">
+            <li class="list_item">
+                <a href="#home">Home</a>
+            </li>
+            <li class="list_item">
+                <a href="#about">Sobre mim</a>
+            </li>
+            <li class="list_item">
+                <a href="#formacao">Formação</a>
+            </li>
+            <li class="list_item">
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li class="list_item">
+                <a href="./contato.html">Contato</a>
+            </li>          
+        </ul> 
+    </nav>
+
+    <div id="home" ></div>
+        
+    <section class="header">
+        <header class="header"><!-- Cabeçalho com nome e imagem -->
+            <h2 id="home">Olá, eu sou<br><span id="maior">Camila Silveira</span><br>Estudante de Ciências de Dados e Business Intelligence</h2>
+            <img id="logo" src="./imagens/logo.jpeg" alt="Foto pessoal de Camila Silveira" title="Camila Silveira">
+
+        </header>
+    </section>
+    <main> <!-- Todo conteúdo do site dividido em seções-->
+        <div id="about" ></div>
+        <br><br><br>
+        <section id="about_me">
+            <h1>Sobre mim</h1>
+            <p>
+                <h3>Me chamo Camila, tenho 25 anos e gosto muito de estudar e trabalhar com dados, transformando-os em informações valiosas que podem orientar tomadas de decisões e criar impacto positivo.</h3>
+                <h3>No meu tempo livre gosto de ver minhas séries favoritas, brincar muito com minhas gatinhas e também sou amante da boa prática de exercícios, frequento academia (sempre que possível) e amo explorar a natureza em passeios relaxantes.</h3>
+            </p>
+        </section>
+
+        <div id="formacao" ></div>
+        <br><br><br>
+        <section id="formacao">
+            <h1>Formação</h1>
+            <p>
+                <img id="img_bd" src="./Imagens/bd.png">
+                
+                <h3>Estou em transição de carreira para o setor de tecnologia, com foco em análise de dados e inteligência de mercado. Atualmente, estou cursando o segundo período do curso de Ciência de Dados, onde desenvolvo competências essenciais, como:</h3>
+                
+                    <ul id="check_list">
+                        <li>Criação e manipulação de bases de dados;</li>
+                        <li>Análise de dados;</li>
+                        <li>Programação em Python;</li>
+                        <li>Consultas SQL.</li>
+                    </ul> 
+                
+                <h3>Para complementar minha formação, estou realizando um curso especializado em Power BI, pois acredito que não basta apenas produzir boas análises se não criarmos bons gráficos (Afinal, uma imagem vale mais do que mil palavras, não é mesmo?)</h3>
+            </p>
+        </section>
+
+        <div id="projetos" ></div>
+        <br><br><br>
+        <section id="projetos">
+            <h1>Projetos</h1>
+            <p>
+                <div class="centro">
+                    <h3 class="negrito">Dashboard Analítico de Vendas Globais</h3>
+                    <h3>Este projeto foca na análise dos dados de vendas de uma empresa fictícia. Com essa análise pudemos observar que o setor de suprimentos é o que mais gera vendas.</h3>
+                    <img class="img_projetos" src="./Imagens/Dashboard Vendas Globais.jpeg">
+                </div>
+            </p>
+            <p>
+                <div class="centro">
+                    <h3 class="negrito">Dashboard Logística</h3>
+                    <h3>Este projeto foca na análise dos dados logísticos de uma empresa fictícia, os dados nos informam o total de entregas realizadas no período, podemos observer que a maior parte das entragas foram realizadas antecipadamente e que a equipe do norte lidera em quantidade de entrega. </h3>
+                    <img class="img_projetos" src="./Imagens/Dashboard Logistica.jpeg">
+                </div>
+            </p>
+        </section>        
+    </main>
+    <footer id="footer"> <!-- Final com rodapé -->
+        Criado por Camila Silveira
+    </footer>
+</body>
+</html>
