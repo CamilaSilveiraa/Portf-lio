@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato</title>
+
+    <style>
+        /*Mesmas configurações do index*/ 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    font-family: "Quicksand", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ededed;
+    
+}
+#navbar{
+    background-color: #eeebeb;
+    padding: 35px 10%;
+    box-shadow: 0 0 5px 5px rgb(212, 211, 211);
+}
+#list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1.5cm;
+}
+.list_item a {
+    text-decoration: none;
+    color: #525050;
+    font-weight: 600;
+    font-size: 18px;
+}
+.header{
+    margin: 0px;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 2cm;
+    align-items: center;
+
+}
+#logo{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    float: right;
+}
+#home{
+    float: left;
+    font-size: 25px;
+    color:rgb(22, 22, 22);
+    font-weight: 570;
+}
+/*Iniciando estilização do corpo da "página contato"*/
+h1{
+    padding: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+#form{
+    text-align: center;
+    padding: 50px;
+}
+#msg{
+    font-size: 20px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav id="navbar"> <!-- Menu de navegação principal -->
+        <ul id="list">
+            <li class="list_item sactive">
+                <a href="./index.html#home">Home</a>
+            </li>
+            <li class="list_item">
+                <a href="./index.html#about_me">Sobre mim</a>
+            </li>
+            <li class="list_item">
+                <a href="./index.html#formacao">Formação</a>
+            </li>
+            <li class="list_item">
+                <a href="./index.html#projetos">Projetos</a>
+            </li>
+            <li class="list_item">
+                <a href="./contato.html">Contato</a>
+            </li>          
+        </ul> 
+    </nav>
+    <p>
+        <h1>Entre em contato comigo</h1>
+    </p>
+    <section id="msg" id="form"> <!--Formulário de contato-->
+        <form action="https://script.google.com/macros/s/AKfycbzu0R5O6sR1CQsmpLwDNP1As543AdghRkxtV2vAkw_8/dev" method="post"> <!--Iniciando o formulário e infornando para onde vão os dados fornecidos pelo usuário-->
+            <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label id="msg" for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
