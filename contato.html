@@ -1,14 +1,14 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camila Silveira - Página de Contato</title>
-
+    <title>contato</title>
+    <link rel="icon" href="./Imagens/logo principal.png.png">
     <style>
         /*Mesmas configurações do index*/ 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-*{
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importando a fonte "Quicksand" para uso no site */
+*{ /* Configurações padrão */
     font-family: "Quicksand", sans-serif;
     margin: 0px;
     padding: 0px;
@@ -16,16 +16,27 @@
 }
 
 body{
-    background-color: #ededed;
-    
+    background-color: #ededed;    
 }
-#navbar{
+/*Melhorando a responsividade*/
+@media (max-width: 768px) { 
+    #list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #navbar {
+        padding: 20px 5%;
+    }
+}
+#navbar{ 
     background-color: #eeebeb;
-    padding: 35px 10%;
-    box-shadow: 0 0 5px 5px rgb(212, 211, 211);
+    padding: 30px 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
 }
-#list{
-    list-style-type: none;
+#list{ /*list e list_item, referente à estilização dos itens da lista*/
+    list-style-type: none; 
     display: flex;
     align-items: center;
     justify-content:center;
@@ -34,42 +45,36 @@ body{
 .list_item a {
     text-decoration: none;
     color: #525050;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
+}
+/*Alterando a cor ao passar o mouse*/
+.list_item a:hover { 
+    color: #2f2e2e;
+    transition: color 0.3s ease;
 }
 .header{
     margin: 0px;
-    padding: 40px 100px;
+    padding: 50px 100px;
+    padding-top: 80px;
     box-sizing: border-box;
     display: flex;
     gap: 2cm;
     align-items: center;
+}
 
-}
-#logo{
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    float: right;
-}
-#home{
-    float: left;
-    font-size: 25px;
-    color:rgb(22, 22, 22);
-    font-weight: 570;
-}
 /*Iniciando estilização do corpo da "página contato"*/
 h1{
     padding: 30px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
 }
 #form{
     text-align: center;
     padding: 50px;
 }
 #msg{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -97,6 +102,7 @@ h1{
         </ul> 
     </nav>
     <p>
+        <div><br><br><br><br></div>
         <h1>Entre em contato comigo</h1>
     </p>
     <section id="msg" id="form"> <!--Formulário de contato-->

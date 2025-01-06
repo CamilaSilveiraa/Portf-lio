@@ -1,12 +1,14 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Camila Silveira, estudante de Ciências de Dados e Business Intelligence">
+    <link rel="shortcut icon" href="./Imagens/Logo_Camila.png">
+    <script src="./script.js" defer></script>
     <title>Camila Silveira</title>
 
-    <style> /*Iniciando a estilização, css interno*/
+   <style> /*Iniciando a estilização, css interno*/
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importando a fonte "Quicksand" para uso no site */
 *{ /* Configurações padrão */
     font-family: "Quicksand", sans-serif;
@@ -16,18 +18,18 @@
 }
 
 body{
-    background-color: #ededed;
-    
+    background-color: #ededed;    
 }
 /*Melhorando a responsividade*/
 @media (max-width: 768px) { 
-    #list {
+    #list, .container-slider{
         flex-direction: column;
         gap: 20px;
     }
     #navbar {
-        padding: 20px 5%;
+        display: none;
     }
+
 }
 #navbar{ 
     background-color: #eeebeb;
@@ -46,8 +48,8 @@ body{
 .list_item a {
     text-decoration: none;
     color: #525050;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
 }
 /*Alterando a cor ao passar o mouse*/
 .list_item a:hover { 
@@ -57,6 +59,7 @@ body{
 .header{
     margin: 0px;
     padding: 50px 100px;
+    padding-top: 80px;
     box-sizing: border-box;
     display: flex;
     gap: 2cm;
@@ -74,6 +77,7 @@ body{
     font-size: 25px;
     color:rgb(22, 22, 22);
     font-weight: 570;
+    text-align: left;
 }
 #maior{
     font-size: 50px;
@@ -81,19 +85,30 @@ body{
     font-weight: 570;
 }
 #about_me, #formacao, #projetos{
-    margin: 30px auto;
+    margin: 40px auto;
     max-width: 80%;  
+}
+#about_me{
+    margin-left: 250px;
+    margin-right: 250px;
 }
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     color:rgb(22, 22, 22);
     font-weight: 500;
     padding-bottom: 20px;
 }
-h3{
+h2{
+    text-align: center;
+    font-size: 25px;
+    color:rgb(22, 22, 22);
+    font-weight: 500;
+    padding: 20px;
+}
+h3, p{
     text-align:justify;
-    font-size: 18px;
+    font-size: 16px;
     color:rgb(22, 22, 22);
     font-weight: 450;
     padding-bottom: 25px;
@@ -109,28 +124,66 @@ h3{
     list-style-type:circle;
     display:block;
     align-items:center;
-    font-size: 17px;
+    font-size: 15px;
     padding: 0px 0px 20px 20px;
     padding-right: 20px;
+    gap: 5px;
+    font-weight: 200px;
 }
 .negrito{
     font-weight: bold;
 }
-.img_projetos{
-    margin: auto;
-    padding-bottom: 30px;
-    width: 90%;
-}
-.centro{
-    text-align:  center;
-}
+
 /*Defnindo rodapé*/
-#footer{
-    background-color: #eeebeb;
-    box-shadow: 0 0 5px 5px rgb(212, 211, 211);
-    text-align: center;
-    padding: 15px;
-    color: #525050
+.copyright {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(48, 46, 46);
+  align-items: center;
+  padding: 5px;
+  color: #acabab
+}
+
+
+/* nova formatação*/
+.swiper {
+  width: 1000px;
+  height: 600px;
+}
+
+.swiper-slider {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  .conteudo_projetos {
+  width: 50%;
+  padding-right: 20px;
+  padding-left: 70px;
+  text-align: start;
+}
+
+
+.conteudo_projetos h3 {
+  font-size: 1.5rem;
+}
+.div_img {
+  width: 50%;
+  padding-left: 40px;
+}
+.img_projeto {
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 }
     </style>
 </head>
@@ -161,14 +214,14 @@ h3{
     <section class="header">
         <header class="header"><!-- Cabeçalho com nome e imagem -->
             <h2 id="home">Olá, eu sou<br><span id="maior">Camila Silveira</span><br>Estudante de Ciências de Dados e Business Intelligence</h2>
-            <img id="logo" src="./Imagens/logo.jpeg" alt="Foto pessoal de Camila Silveira" title="Camila Silveira">
+            <img id="logo" src="./Imagens/logo2.jpeg" alt="Foto pessoal de Camila Silveira" title="Camila Silveira">
 
         </header>
     </section>
     <main> <!-- Todo conteúdo do site dividido em seções-->
         <div id="about" ></div>
         <br><br><br>
-        <section id="about_me"> <!-- seção "Sobre mim"-->
+        <section id="about_me">
             <h1>Sobre mim</h1>
             <p>
                 <h3>Me chamo Camila, tenho 25 anos e gosto muito de estudar e trabalhar com dados, transformando-os em informações valiosas que podem orientar tomadas de decisões e criar impacto positivo.</h3>
@@ -176,7 +229,7 @@ h3{
             </p>
         </section>
 
-        <div id="formacao" ></div> <!-- seção "Formação"-->
+        <div id="formacao" ></div>
         <br><br><br>
         <section id="formacao">
             <h1>Formação</h1>
@@ -196,28 +249,71 @@ h3{
             </p>
         </section>
 
-        <div id="projetos" ></div> <!-- seção "Projetos"-->
+        <div id="projetos" ></div>
         <br><br><br>
         <section id="projetos">
             <h1>Projetos</h1>
-            <p>
-                <div class="centro">
-                    <h3 class="negrito">Dashboard Analítico de Vendas Globais</h3>
-                    <h3>Este projeto foca na análise dos dados de vendas de uma empresa fictícia. Com essa análise pudemos observar que o setor de suprimentos é o que mais gera vendas.</h3>
-                    <img class="img_projetos" src="./Imagens/Dashboard Vendas Globais.jpeg">
+            <h2>Explore alguns dos meus projetos de portfólio</h2>
+        
+            <div class="container-slider">
+                <!--<button id="prev-button"> <img src="./Imagens/seta.webp" alt="prev-button"></button>-->
+                <div>
+                    <div class="swiper-slider">
+                        
+                        <div class="div_img">
+                            <img class="img_projeto" src="./Imagens/Dashboard RH.PNG" alt="Dashboard Logistica">
+                        </div>
+                        
+                        <div class="conteudo_projetos">
+                            <h3 class="negrito">Dashboard RH</h3></br>
+                            <p>O relatório apresenta informações relacionadas ao departamento de Recursos Humanos,  o layout exibe dados gerais relacionados a admissões, demissões, despesas salariais e outras métricas relevantes, como:</p></br>
+                                <ul id="check_list">
+                                    <li>Faixa Etária de Colaboradores: Predomínio de colaboradores em faixas etárias mais experientes (30-49 anos). Apenas 18,81% têm até 29 anos, o que pode influenciar a sucessão e inovação a longo prazo;</li>
+                                    <li>Métrica Geral de Turnover: O índice de 22,4% de desligamento em relação ao total de ativos é considerável e pode indicar desafios relacionados à retenção de talentos.</li>
+                                    <li>Despesas Salariais por Setor: Mais de 70% das despesas salariais são alocadas ao setor de Vendas. A análise de produtividade desse setor deve ser considerada para justificar esse investimento.</li>         
+                                </ul> 
+                            <p>É essencial focar em ações para reduzir o turnover. Também é importante reavaliar os custos salariais nos setores, assegurando que os investimentos, especialmente no setor de Vendas, estejam gerando o retorno esperado.</p></br>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiZjBlNGVlNzMtZDdkNS00MmU4LWE5ZmItODZjYmZiNTZiOTZmIiwidCI6IjMzZjhmMWRmLTJiNWQtNDc5OC04NTM0LTU4YzUzYjc0ZDIxNiJ9" target="_blank"><button class="btn_projeto">Link do projeto</button></a>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slider">
+
+                        <div class="div_img">
+                            <img class="img_projeto" src="./Imagens/Relatório Vendas Globais.PNG" alt="CEP">
+                        </div>
+
+                        <div class="conteudo_projetos">
+                            <h3 class="negrito">Dashboard Analítico de Vendas Globais</h3></br>
+                            <p> Este projeto foca na análise dos dados de vendas de uma empresa fictícia,  o dashboard apresenta um resumo das vendas globais, destacando métricas e insights chave, como:</p>
+                                <ul id="check_list">
+                                    <li>Faturamento Total: $64,17 milhões acumulados, indicando um forte desempenho global;</li>
+                                    <li>Produto Mais Vendido: O DVD M360 Preto lidera as vendas, sendo um produto essencial para a estratégia comercial;</li>
+                                    <li>Evolução Temporal: O faturamento e a quantidade vendida mostram um pico em novembro de 2017, possivelmente devido à sazonalidade (Black Friday/Natal), seguido de estabilidade nos anos seguintes.</li>
+                                    
+                                </ul> 
+                            <p>O relatório oferece uma visão clara do desempenho de vendas, permitindo identificar oportunidades de crescimento e otimização.</p></br>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiZWNiMTE2ODAtZGEyMi00ZDYwLTk5NzEtYjU3ZmMxMzk1OWUwIiwidCI6IjMzZjhmMWRmLTJiNWQtNDc5OC04NTM0LTU4YzUzYjc0ZDIxNiJ9" target="_blank">
+                                <button class="btn_projeto">Link do projeto</button>
+                            </a>
+                        </div>
+                    </div>                    
                 </div>
-            </p>
-            <p>
-                <div class="centro">
-                    <h3 class="negrito">Dashboard Logística</h3>
-                    <h3>Este projeto foca na análise dos dados logísticos de uma empresa fictícia, os dados nos informam o total de entregas realizadas no período, podemos observer que a maior parte das entragas foram realizadas antecipadamente e que a equipe do norte lidera em quantidade de entrega. </h3>
-                    <img class="img_projetos" src="./Imagens/Dashboard Logistica.jpeg">
-                </div>
-            </p>
-        </section>        
-    </main>
-    <footer id="footer"> <!-- Final com rodapé -->
-        Criado por Camila Silveira
-    </footer>
+
+                <!--<button id="next-button"> <img src="./Imagens/seta.webp" alt="next-button"></button>-->
+
+            </div>
+            
+            <div class="swiper-pagination"></div>      
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+    
+       
+        <div class="copyright">
+            Copyright © Camila Silveira 2024
+        </div>
+    
 </body>
 </html>
